@@ -24,4 +24,12 @@ window.onload = () => {
 
         context.fillRect(x, y, 5, 5);
     }
+
+    // Drow a cos wave
+    for(let angle = 0; angle <= 180; angle += 0.001) {
+        let x = angle * 200,
+            y = Math.cos(angle) * 200;
+        
+        context.fillRect(x, y , 5, 5);
+    }
 }
