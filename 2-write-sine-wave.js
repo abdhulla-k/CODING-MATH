@@ -26,10 +26,24 @@ window.onload = () => {
     }
 
     // Drow a cos wave
-    for(let angle = 0; angle <= 180; angle += 0.001) {
+    for(let angle = 0; angle <= 180; angle += 0.1) {
         let x = angle * 200,
             y = Math.cos(angle) * 200;
         
+        // Set a red color for graph
+        context.fillStyle = "gray"
+
         context.fillRect(x, y , 5, 5);
+    }
+
+    // Drow tan graph
+    for(let angle = 0; angle <= 180; angle += 0.01 ) {
+        let x = angle * 200;
+        let y = Math.tan(angle) * 200;
+
+        // Set a blue color for graph
+        context.fillStyle = "blue"
+
+        context.fillRect(x, y, 5, 5);
     }
 }
